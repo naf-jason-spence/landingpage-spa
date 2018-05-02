@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams, HttpResponse } from '@angular/common/http';
+import { environment } from '../../../environments/environment';
 
 import { Observable } from 'rxjs/Observable';
 import { ErrorObservable } from 'rxjs/observable/ErrorObservable';
@@ -7,13 +8,11 @@ import { catchError, map } from 'rxjs/operators';
 
 import { ContactLead } from './models/contact-lead.interface';
 
-const postApiUrl = 'http://qa.nafapi.com';
-
 @Injectable()
 export class LeadformService {
 
   contact: ContactLead;
-  private contactLeadApiUrl: string = `${postApiUrl}/v1/lead/PostCareerLead`;
+  private contactLeadApiUrl: string = `${environment.serverUrl}/v1/lead/PostCareerLead`;
 
   constructor(private http: HttpClient) { }
 
