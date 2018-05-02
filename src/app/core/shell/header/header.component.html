@@ -1,14 +1,14 @@
 <header>
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-nafblue">
     <div class="container">
-        <a class="navbar-brand" routerLink="/">New American Funding</a>
+        <a class="navbar-brand" routerLink="/home">New American Funding</a>
         <button class="navbar-toggler" type="button" aria-controls="navbar-menu"
                 aria-label="Toggle navigation" (click)="toggleMenu()" [attr.aria-expanded]="!menuHidden">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div id="navbar-menu" class="collapse navbar-collapse float-xs-none" [ngbCollapse]="menuHidden">
           <div class="navbar-nav ml-auto">
-            <a class="nav-item nav-link text-uppercase" routerLink="" routerLinkActive="active">
+            <a class="nav-item nav-link text-uppercase" routerLink="/home" routerLinkActive="active">
               <span>Home</span>
             </a>
             <a class="nav-item nav-link text-uppercase" routerLink="/about" routerLinkActive="active">
